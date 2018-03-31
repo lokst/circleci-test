@@ -43,3 +43,5 @@ workflows:
     jobs:
       - one
       - two
+      - three
+      - four
