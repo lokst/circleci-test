@@ -8,7 +8,7 @@ jobs:
       - run: echo "A first hello"
       - run: mkdir -p my_workspace
       - run: echo "Trying out workspaces" > my_workspace/echo-output
-      - run: sleep 600
+      - run: sleep 10
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
           root: my_workspace
@@ -21,21 +21,21 @@ jobs:
     steps:
       - checkout
       - run: echo "A more familiar hi"  
-      - run: sleep 480
+      - run: sleep 10
   three:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "This is the third job"  
-      - run: sleep 300
+      - run: sleep 10
   four:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
       - run: echo "Ciao"
-      - run: sleep 240
+      - run: sleep 10
       - run: ls -lh
 workflows:
   version: 2
