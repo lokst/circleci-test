@@ -45,3 +45,6 @@ workflows:
       - two
       - three
       - four
+          filters:
+            tags:
+              only: /^v.*/
